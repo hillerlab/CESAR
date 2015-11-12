@@ -5,15 +5,18 @@ Its main purpose is to facilitate assessing exon conservation and thus transferr
 
 #Installation
 Except for Python 2.x, CESAR uses Jacob Schreiber's YAHMM (Yet Another Hidden Markov Model) library. 
-Please follow the [these instructions](https://github.com/jmschrei/yahmm) to install YAHMM.
+Please follow [these instructions](https://github.com/jmschrei/yahmm) to install YAHMM.
 
 #Input & Output
-The exon sequence of the reference genome and the query sequences are given in single FASTA file. The first fasta entry is the reference exon. 
-Every codon that is entirely encoded by this exon should be in upper case letters. Bases belonging to codons that are split between this exon and the up/downstream exon should be in lower case. CESAR uses the number of lower case letters at the beginning and end of the exon to determine the reading frame. 
+The exon sequence of the reference genome and the query sequences are given in single FASTA file (see examples/ directory). The first fasta entry is the reference exon, all other fasta entries are different query sequences that align to this exon. 
 
-In this example, the first exon base is position 3 in a codon split by the upstream and this exon (upstream intron is in phase 2). Exon bases 2-4 encode the first full codon (CCT). The last two exon bases are position 1 and 2 in a codon split by this and the downstream exon (downstream intron is in phase 2). Thus, the last full codon encoded by this exon is ATG. 
+For the reference exon, CESAR uses upper and lower case letters to determine the reading frame of the exon. Every codon that is entirely encoded by this exon should be in upper case letters. Bases belonging to codons that are split between this exon and the up/downstream exon should be in lower case. CESAR uses the number of lower case letters at the beginning and end of the exon to determine the reading frame. 
+
+In this example, 
 
   `gCCTGGGAACTTCACCTACCACATCCCTGTCAGTAGTGGCACCCCACTGCACCTCAGCCTGACTCTGCAGATGaa`
+
+the first exon base is position 3 in a codon split by the upstream and this exon (upstream intron is in phase 2). Exon bases 2-4 encode the first full codon (CCT). The last two exon bases are position 1 and 2 in a codon split by this and the downstream exon (downstream intron is in phase 2). Thus, the last full codon encoded by this exon is ATG. 
 
 NOTE: Each sequence must be given in a single line (no 80 char line breaks). 
 
