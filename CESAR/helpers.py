@@ -69,7 +69,10 @@ def get_eth_insert_probs(codon_sub_probs):
         normalized_probs[codon]= raw_insertion_scores[codon]/scores_sum
 
     #remove stop codons and get their propability to know by how much to increase the non-stop-codons props
-    stop_codon_sum = normalized_probs.pop('TAA') + normalized_probs.pop('TAG') + normalized_probs.pop('TGA')
+    stop_codon_sum = normalized_probs['TAA'] + normalized_probs['TAG'] + normalized_probs['TGA']
+    normalized_probs['TAA'] = 0
+    normalized_probs['TAG'] = 0
+    normalized_probs['TGA'] = 0
     #print("sum of stop codon probs from eth matrix", stop_codon_sum)
     fix_factor = stop_codon_sum/1.0
     for codon, p in normalized_probs.items():
