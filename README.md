@@ -44,6 +44,9 @@ Default values for the transition probabilities are given in CESAR/params.py. Th
 
 By default, CESAR assumes you align an internal exon that has both a donor splice site upstream and an acceptor splice site downstream. Command line parameters allow to specify that the exon is the first coding exon (no donor site), the last coding exon (no acceptor site) or if the exon has non-canonical (U12) splice sites. 
 
+#Reference
+Sharma V, Elghafari A, and Hiller M. [Coding Exon-Structure Aware Realigner (CESAR) utilizes genome alignments for accurate comparative gene annotation](http://nar.oxfordjournals.org/content/early/2016/03/25/nar.gkw210.long). Nucleic Acids Res., doi: 10.1093/nar/gkw210. 2016
+
 
 
 
