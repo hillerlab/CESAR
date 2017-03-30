@@ -1,6 +1,6 @@
 # CESAR
 
-**_Please use our new [CESAR 2.0](https://github.com/hillerlab/CESAR2.0) instead of this first implementation in python. CESAR 2.0 is much faster, much more memory-efficient, has a higher accuracy in annotating exons and new features such as aligning entire multi-exon genes._**
+**_Please use our new [CESAR 2.0](https://github.com/hillerlab/CESAR2.0) instead of this first implementation in python. CESAR 2.0 is much faster, much more memory-efficient, has a higher accuracy in annotating exons and new features such as aligning entire multi-exon genes. CESAR 2.0 also provides a workflow to apply the method genome-wide to many species._**
 
 
 =====================================
